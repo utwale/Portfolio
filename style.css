@@ -1,0 +1,483 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: #eff4fd;
+    color: #212121;
+    line-height: 1.6;
+}
+
+.hero{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: #eff4fd;
+    
+}
+nav{
+    display: flex;
+    width: 84%;
+    margin: auto;
+    padding: 20px 0;
+    align-items: center;
+    justify-content: space-between ;
+    z-index: 1000;
+}
+
+nav ul li{
+  display: inline-block;  
+  list-style: none;
+  margin: 10px 20px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    
+}
+
+nav ul li a.hover{
+    color: red;
+}
+
+.detel{
+    margin-left: 8%;
+    margin-top: 8%;   
+}
+
+.detel h1{
+    font-size: 50px;
+    color: #212121;
+    margin-bottom: 20px;
+    line-height: 125%;
+}
+
+span{
+    color: rgb(187, 0, 255);
+}
+
+.detel p{
+    color: #555;
+    line-height: 10px;
+}
+
+.detel a{
+    background: #212121;
+    padding: 10px 18px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #fff;
+    display: inline-block;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+.images{
+    width: 45%;
+    height: 90%;
+    position: absolute;
+    bottom: 0;
+    right: 100px;
+}
+
+.images img{
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    transition: bottom 1s, left 1s
+}
+
+.images:hover .shape{
+    bottom: 40px;
+}
+
+.images:hover .girl{
+    left: 45%;
+}
+
+.icon{
+    margin-left: 8.2%;
+    display: flex;
+    gap: 10px; 
+    flex-wrap: wrap; 
+    width: auto; 
+    height: auto; 
+    position: relative;
+    
+} 
+
+.icon a{
+    color: #000;
+    
+}
+
+.tech-stack{
+    margin-top: 35px;
+    margin-left: 8%;
+    display: flex;
+}
+
+.tech-stack .tech {
+    display: flex;
+    gap: 10px; /* Add space between images */
+    flex-wrap: wrap; /* Ensure images wrap if needed */
+    width: auto; /* Adjust width to fit content */
+    height: auto; /* Adjust height to fit content */
+    position: relative; /* Use relative positioning for alignment */
+    left: 30px; /* Adjust as needed */
+}
+
+.tech img {
+    width: 25px; /* Adjust the width as needed */
+    height: 25px; /* Adjust the height as needed */
+    object-fit: contain; /* Ensure images fit within their container */
+    margin: 0 10px; /* Add horizontal spacing between images */
+}
+
+/* Content Section (for About, Projects, Contact pages) */
+.content {
+    width: 80%;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.content h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #212121;
+}
+
+.content p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.content ul li {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #333;
+}
+
+.content ul li a {
+    color: rgb(187, 0, 255);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.content ul li a:hover {
+    text-decoration: underline;
+}
+
+/*about*/
+.about-section {
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 100px;
+    
+}
+
+.about-image img {
+    width: 450px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.about-content {
+    max-width: 600px;
+    padding-left: 50px;
+    
+}
+
+.about-content h2 {
+    color: #750c97;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.about-content h1 {
+    font-size: 30px;
+  
+}
+.about-content h4
+{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.about-content p {
+    font-size:16px;
+    line-height: 1.6;
+    color: #555;
+    font-weight: 100;
+}
+
+/*project section*/
+.projects-section {
+   
+    padding: 50px;
+    text-align: center;
+}
+
+.projects-section h2 {
+   
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.filter-buttons {
+    margin-bottom: 30px;
+}
+
+.filter-btn {
+    background-color: #edd7f0;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    color: #333;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.filter-btn:hover, .filter-btn.active {
+    background-color: #750c97;
+    color: white;
+}
+
+.projects-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.project-card {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 300px;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #750c97;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.project-actions {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    background-color: #edd7f0;
+}
+
+.project-actions a {
+    font-size: 20px;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.project-actions a:hover {
+    color: #750c97;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .projects-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .filter-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .filter-btn {
+        margin: 5px;
+    }
+}
+
+/*contact page*/
+ 
+  .contact-section {
+    text-align: left;
+    padding: 80px 90px;
+    line-height: 150%;
+    background-color: #edd7f0;
+  }
+  
+  .contact-section h2 {
+    color: #750c97;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  
+  .contact-section h3 {
+    font-size: 24px;
+    margin-bottom: 40px;
+  }
+  
+  .contact-section h3 span {
+    font-size: 32px;
+  }
+  
+  .contact-info {
+    display: flex;
+    gap: 60px;
+  }
+  
+  .info-item {
+    display: flex;
+    align-items: center;
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;  
+    position: relative; 
+    left: 9px;
+    
+  }
+  
+  .info-item a{
+    text-decoration: none;
+    color: #000;
+  }
+
+  .info-item a:hover{
+    color: #0754ab;
+  }
+  
+  .info-item h4 {
+    font-weight: 700;
+  }
+  
+  footer {
+    background-color: #750c97;
+    color: white;
+    text-align: center;
+  }
+ 
+
+
+  .social-icons {
+    justify-content: center;
+    display: flex;
+    gap: 10px; 
+    flex-wrap: wrap; 
+  }
+  
+  .social-icons a  {
+    width: 24px;
+    height: 24px;
+    color:#fff;
+    
+  }
+  
+
+/* For smaller screens */
+@media (max-width: 768px) {
+    .about-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-content {
+        padding-left: 0;
+        margin-top: 30px;
+    }
+
+    .about-image img {
+        width: 100%;
+    }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+    }
+
+    .detel {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .images {
+        position: static;
+        width: 100%;
+        height: auto;
+    }
+
+    .images img {
+        position: static;
+        transform: none;
+        width: 70%;
+        margin: auto;
+    }
+
+    .tech-stack {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: 0;
+    }
+
+    .icon {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .detel h1 {
+        font-size: 36px;
+    }
+
+    .tech img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .content h1 {
+        font-size: 28px;
+    }
+
+    .content p, .content ul li {
+        font-size: 16px;
+    }
+}
+
